@@ -107,7 +107,7 @@ public class DetailActivity extends AppCompatActivity {
         RequestParams params = new RequestParams();
         params.put("title", titleString);
         params.put("image", image);
-//到這都還沒問題
+
 
         client.post(urlString, params, new JsonHttpResponseHandler() {
             @Override
@@ -214,7 +214,7 @@ public class DetailActivity extends AppCompatActivity {
         matrix.postScale(resize, resize); // 設定寬高的縮放比例
 
         // 產生縮小後的圖
-        Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0, 100, 100, matrix, true);
+        Bitmap resizedBitmap = Bitmap.createBitmap(bitmap, 0, 0, width, height, matrix, true);
         return resizedBitmap;
 
 
